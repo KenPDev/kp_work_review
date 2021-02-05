@@ -75,7 +75,7 @@
     .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 27vw);
+        grid-template-rows: repeat(3, 1fr);
         grid-row-gap: 20px;
         grid-column-gap: 20px;
         /*background-color:red;*/
@@ -101,6 +101,7 @@
         width: 250px;
         padding: 0px 0px 0px 0px;
         object-fit: cover;
+        grid-row-end: span 2;
     }
     .grid-item-2b {
             background: linear-gradient(to left top, rgba(192,192,192,0.3) 50%, rgba(192,192,192,0.3) 50%);
@@ -130,6 +131,7 @@
         width: 250px;
         padding: 0px 0px 0px 0px;
         object-fit: cover;
+        grid-row-end: span 2;
     }
     .grid-item-4b {
             background: linear-gradient(to left top, rgba(192,192,192,0.3) 50%, rgba(192,192,192,0.3) 50%);
@@ -144,6 +146,7 @@
         width: 250px;
         padding: 0px 0px 0px 0px;
         object-fit: cover;
+        align-self: end;
     }
     .grid-item-5b {
             background: linear-gradient(to left top, rgba(192,192,192,0.3) 50%, rgba(192,192,192,0.3) 50%);
@@ -158,6 +161,8 @@
         width: 250px;
         padding: 0px 0px 0px 0px;
         object-fit: cover;
+        grid-row-end: span 2;
+        grid-row-start: 2;
     }
     .grid-item-6b {
             background: linear-gradient(to left top, rgba(192,192,192,0.3) 50%, rgba(192,192,192,0.3) 50%);
@@ -199,44 +204,28 @@
 <div class="grid-container">
     <div class="grid-item-1">
         <img src="assets/city-skyline.jpg"  alt="city skyline">
-            <div class="grid-item-1b">
-                <h3>Toronto: the skyline!</h3>
-            </div>
     </div>
        
     <div class="grid-item-2">
         <img src="assets/cn-tower.jpg"  alt="cn tower">
-            <div class="grid-item-2b">
-            <h3>The CN Tower. One of the world's largest towers.</h3>
-            </div>
     </div>
-
+    
     <div class="grid-item-3">
-        <img src="assets/new-city-hall.jpg"  alt="city hall">
-            <div class="grid-item-3b">
-                <h3>The Roger's Centre: Toronto's iconic Skydome.</h3>
-            </div>
+        <img src="assets/rogers-center.jpg" alt="roger's centre">
     </div>
 
     <div class="grid-item-4">
         <img src="assets/old-city-hall.jpg" alt="old city hall">
-        <div class="grid-item-4b">
-            <h3>The old City Hall. The Clock Tower.</h3>
-        </div>
+    </div>
+
+    <div class="grid-item-5">
+        <img src="assets/rom.jpg" alt="rom">
+    </div>  
+
+    <div class="grid-item-6">
+        <img src="assets/new-city-hall.jpg"  alt="city hall">
     </div>
     
-    <div class="grid-item-5">
-        <img src="assets/rogers-center.jpg" alt="roger's centre">
-            <div class="grid-item-5b">
-                <h3>Royal Ontario Museum. Most visited museum in Canada.</h3>
-             </div>
-    </div>
-    <div class="grid-item-6">
-        <img src="assets/rom.jpg" alt="rom">
-            <div class="grid-item-6b">
-                <h3>Toronto City Hall. A Brutalist Architecture Masterpiece.</h3>
-            </div>
-    </div>
 </div>
 
   
