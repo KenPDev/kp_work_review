@@ -75,26 +75,29 @@
     .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1, 27vw);
         grid-row-gap: 20px;
         grid-column-gap: 20px;
         /*background-color:red;*/
         padding: 10px 0px 30px 0px;
     }
     .grid-item-1 {
-        display:inline-block;
-        padding: 0px 0px 0px 0px;
-        object-fit: cover;
-        /*background-color: royalblue;*/
-        }
-    .grid-item-1b {
-            background: linear-gradient(to left top, rgba(192,192,192,0.3) 50%, rgba(192,192,192,0.3) 50%);
-        }
+        background: url('assets/city-skyline.jpg');
+        height: 33.3%;
+        background-size: cover;
+    }
     .grid-item-1:hover {
-        visibility: hidden;
-        position: relative;
+        background: linear-gradient(to left top, rgba(255,255,255,0) 50%, rgba(255,255,255,0.75) 50%), url('assets/city-skyline.jpg');
+        background-size: cover;
+    }
 
-       }
+    .grid-item-1:hover > .grid-item-1b {
+        visibility: visible;
+    }
+
+    .grid-item-1b {
+        visibility: hidden;
+    }
+    
 
     .grid-item-2 {
         display:inline-block;
@@ -199,10 +202,9 @@
 <div class="grid-container">
     <div class="column">
         <div class="grid-item-1">
-            <img src="assets/city-skyline.jpg"  alt="city skyline">
-                <div class="grid-item-1b">
-                    <h3>Toronto: the skyline!</h3>
-                </div>
+            <div class="grid-item-1b">
+                <h3>Toronto: the skyline!</h3>
+            </div>
         </div>
         <div class="grid-item-4">
             <img src="assets/old-city-hall.jpg" alt="old city hall">
